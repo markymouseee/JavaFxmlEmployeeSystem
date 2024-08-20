@@ -160,7 +160,7 @@ public class SettingsController implements Initializable{
             e.printStackTrace();
         }
     }
-
+    
     @FXML
     private void btnLogout(){
         Alert alert = new Alert(AlertType.CONFIRMATION);
