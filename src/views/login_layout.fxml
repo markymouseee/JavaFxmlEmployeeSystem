@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="login_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="989.0" styleClass="background" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminLoginController">
+   <children>
+      <ImageView fitHeight="561.0" fitWidth="989.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.2;">
+         <image>
+            <Image url="@../stylesheets/desktop-wallpaper-devops-systems-integration-background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="-3.0" prefHeight="35.0" prefWidth="989.0">
+         <children>
+            <Button layoutX="931.0" layoutY="5.0" mnemonicParsing="false" onAction="#btnClose" prefHeight="26.0" prefWidth="54.0">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="TIMES" size="18" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="btnclose" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </Button>
+            <Button layoutX="871.0" layoutY="5.0" mnemonicParsing="false" onAction="#btnMinimize" prefHeight="26.0" prefWidth="54.0">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="MINUS" size="18" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="btnminize" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </Button>
+            <FontAwesomeIcon glyphName="USERS" layoutX="8.0" layoutY="27.0" size="25" styleClass="shadow" />
+            <Text layoutX="47.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="Employee System">
+               <font>
+                  <Font name="Berlin Sans FB" size="17.0" />
+               </font>
+            </Text>
+         </children>
+         <styleClass>
+            <String fx:value="UIbar" />
+            <String fx:value="text" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane fx:id="loginForm" layoutX="509.0" layoutY="31.0" prefHeight="556.0" prefWidth="436.0">
+         <children>
+            <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="210.0" layoutY="119.0" size="50" styleClass="shadow" />
+            <Text fill="WHITE" layoutX="161.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="LOG IN" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Black" size="35.0" />
+               </font>
+            </Text>
+            <TextField fx:id="usernameField" layoutX="92.0" layoutY="195.0" prefHeight="50.0" prefWidth="316.0" promptText="Username or email" styleClass="shadow">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="login" layoutX="108.0" layoutY="343.0" mnemonicParsing="false" onAction="#btnLogin" prefHeight="42.0" prefWidth="243.0" text="Log in" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="btnLogin" />
+               </styleClass>
+               <font>
+                  <Font name="Arial Black" size="19.0" />
+               </font></Button>
+            <FontAwesomeIcon fill="WHITE" glyphName="USER_SECRET" layoutX="51.0" layoutY="232.0" size="35" styleClass="shadow" text="" />
+            <FontAwesomeIcon fill="WHITE" glyphName="LOCK" layoutX="53.0" layoutY="307.0" size="40" styleClass="shadow" />
+            <Text fx:id="errorHandler" layoutX="44.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" textAlignment="CENTER" wrappingWidth="371.13671875">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Text>
+            <TextField layoutX="91.0" layoutY="269.0" prefHeight="50.0" prefWidth="316.0" promptText="Password" visible="false" />
+            <AnchorPane fx:id="showpass_form" layoutX="91.0" layoutY="264.0" prefHeight="57.0" prefWidth="316.0">
+               <children>
+                  <PasswordField fx:id="passwordField" layoutY="4.0" prefHeight="50.0" prefWidth="316.0" promptText="Password" styleClass="shadow">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <Button layoutX="268.0" layoutY="15.0" mnemonicParsing="false" onAction="#showpassword" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="EYE_SLASH" size="20">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontAwesomeIcon>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="hidepass_form" layoutX="89.0" layoutY="264.0" prefHeight="57.0" prefWidth="316.0" visible="false">
+               <children>
+                  <TextField fx:id="showpasswordField" layoutX="2.0" layoutY="4.0" prefHeight="50.0" prefWidth="316.0" promptText="Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="269.0" layoutY="15.0" mnemonicParsing="false" onAction="#hidepassword" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="EYE" size="20">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontAwesomeIcon>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Hyperlink layoutX="281.0" layoutY="419.0" onAction="#createAccount" text="Create account" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink layoutX="53.0" layoutY="419.0" onAction="#forgotPassword" text="Forgot password?" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+      <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="209.0" layoutY="281.0" size="80" styleClass="shadow" />
+      <Text fill="WHITE" layoutX="50.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="EMPLOYEE SYSTEM MANAGEMENT" textAlignment="CENTER" wrappingWidth="403.0">
+         <font>
+            <Font name="Berlin Sans FB" size="46.0" />
+         </font>
+      </Text>
+      <Text fill="#b2b2b2c7" layoutX="173.0" layoutY="568.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="Copyright © Mark Noriel">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Text>
+      <AnchorPane fx:id="email_form" layoutX="532.0" layoutY="31.0" prefHeight="556.0" prefWidth="419.0" visible="false">
+         <children>
+            <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" layoutX="180.0" layoutY="165.0" size="50" />
+            <TextField layoutX="68.0" layoutY="242.0" prefHeight="50.0" prefWidth="316.0" promptText="Email">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" layoutX="121.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter email">
+               <font>
+                  <Font name="Berlin Sans FB" size="37.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="WHITE" glyphName="ENVELOPE" layoutX="27.0" layoutY="278.0" size="35" />
+            <Button layoutX="141.0" layoutY="315.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" text="Next" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btnLogin" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </Button>
+            <Hyperlink layoutX="148.0" layoutY="381.0" onAction="#backtologin" styleClass="shadow" text="Back to log in" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="19.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signup_form" layoutX="524.0" layoutY="35.0" prefHeight="549.0" prefWidth="436.0" visible="false">
+         <children>
+            <Text fill="WHITE" layoutX="153.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="SIGN UP">
+               <font>
+                  <Font name="Arial Black" size="36.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" layoutX="209.0" layoutY="57.0" size="50" styleClass="shadow" />
+            <TextField fx:id="new_fullname" layoutX="79.0" layoutY="142.0" prefHeight="42.0" prefWidth="316.0" promptText="Fullname" styleClass="shadow">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </TextField>
+            <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="37.0" layoutY="176.0" size="35" styleClass="shadow" />
+            <TextField fx:id="new_username" layoutX="79.0" layoutY="196.0" prefHeight="42.0" prefWidth="316.0" promptText="Username" styleClass="shadow">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="new_email" layoutX="79.0" layoutY="250.0" prefHeight="42.0" prefWidth="316.0" promptText="Email" styleClass="shadow">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="new_password" layoutX="79.0" layoutY="304.0" prefHeight="42.0" prefWidth="316.0" promptText="Password" styleClass="shadow" />
+            <PasswordField fx:id="new_retype_password" layoutX="79.0" layoutY="361.0" prefHeight="42.0" prefWidth="316.0" promptText="Re-type password" styleClass="shadow" />
+            <Button layoutX="145.0" layoutY="421.0" mnemonicParsing="false" onAction="#btnSignUp" prefHeight="33.0" prefWidth="185.0" text="Sign up" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="btnLogin" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="37.0" layoutY="230.0" size="35" styleClass="shadow" />
+            <FontAwesomeIcon fill="WHITE" glyphName="ENVELOPE" layoutX="33.0" layoutY="281.0" size="35" styleClass="shadow" />
+            <FontAwesomeIcon fill="WHITE" glyphName="LOCK" layoutX="41.0" layoutY="337.0" size="35" styleClass="shadow" />
+            <FontAwesomeIcon fill="WHITE" glyphName="LOCK" layoutX="42.0" layoutY="394.0" size="35" styleClass="shadow" />
+            <Hyperlink layoutX="136.0" layoutY="506.0" onAction="#haveAnAccount" styleClass="shadow" text="Do you have an account?" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../stylesheets/loginui.css" />
+   </stylesheets>
+</Pane>

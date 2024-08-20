@@ -1,0 +1,18 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\fontawesomefx.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\javafx.base.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\javafx.controls.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\javafx.fxml.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\javafx.graphics.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\javafx.media.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\javafx.swing.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\javafx.web.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\javafx-swt.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\javax.mail.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\jBCrypt.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\mysql-connector-j-8.4.0.jar",
+        "c:\\Program Files\\Java\\javafx-sdk-22.0.1\\lib\\spring-context-6.1.10.jar"
+    ]
+}

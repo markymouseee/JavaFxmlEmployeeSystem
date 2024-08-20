@@ -1,0 +1,47 @@
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 6, 0, 0, 0);
+}
+
+.white-bg{
+    -fx-background-color: #ffff;
+}
+
+.top-row{
+    -fx-background-color: #cccccc;
+}
+.main-bg{
+    -fx-background-color: linear-gradient(#222831, #31363F, #76ABAE, #a3a3a3);
+}
+
+.input{
+    -fx-background-color: transparent;
+    -fx-border-color: #ffff;
+    -fx-border-radius: 10px;
+    -fx-text-fill: #ffff;
+}
+
+.btnConfirm{
+    -fx-background-color: #198754;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #ffff;
+}
+
+.btnConfirm:hover{
+    -fx-background-color: #13643e;
+}
+
+.btnclose{
+    -fx-background-color: #E43244;
+}
+
+.btnminize{
+    -fx-background-color: #0dcaf0;
+}
+
+.btnclose:hover{
+    -fx-background-color: #b42735;
+}
+
+.btnminize:hover{
+    -fx-background-color: #0ba2c0;
+}

@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1204.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeDataController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="271.0" layoutY="301.0" prefHeight="885.0" prefWidth="1204.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="200.0" styleClass="semi-top-form" stylesheets="@../stylesheets/dashboardui.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="-2.0" prefHeight="35.0" prefWidth="1204.0" styleClass="top-form" stylesheets="@../stylesheets/dashboardui.css" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="USERS" layoutX="11.0" layoutY="33.0" size="30" />
+                              <Text layoutX="56.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMPLOYEE MANAGEMENT SYSTEM">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="17.0" />
+                                 </font>
+                              </Text>
+                              <Button layoutX="1137.0" layoutY="5.0" mnemonicParsing="false" onAction="#btnClose" prefHeight="31.0" prefWidth="60.0">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="TIMES" size="20" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="btnclose" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                              <Button layoutX="1070.0" layoutY="5.0" mnemonicParsing="false" onAction="#btnMinimize" prefHeight="31.0" prefWidth="60.0">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="MINUS" size="20" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="btnminize" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="840.0" prefWidth="292.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="840.0" prefWidth="312.0" stylesheets="@../stylesheets/dashboardui.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Circle fill="#ffffff5e" layoutX="53.0" layoutY="88.0" radius="37.0" stroke="WHITE" strokeType="INSIDE" />
+                              <FontAwesomeIcon fx:id="sideIcon" fill="WHITE" glyphName="USER" layoutX="29.0" layoutY="109.0" size="60" text="" />
+                              <Text fx:id="sideRole" fill="WHITE" layoutX="103.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="180.9560546875">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="sideEmail" fill="WHITE" layoutX="103.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="189.876953125">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#02ff00" layoutX="87.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="•" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Black" size="26.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="logout" layoutX="54.0" layoutY="775.0" mnemonicParsing="false" onAction="#btnLogout" prefHeight="28.0" prefWidth="186.0" text="Log out" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="20" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="btnlogout" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                              <Line endX="120.0" fill="WHITE" layoutX="134.0" layoutY="164.0" startX="-100.0" stroke="WHITE" />
+                              <Button fx:id="settingsbtn" layoutX="54.0" layoutY="713.0" mnemonicParsing="false" onAction="#btnSettiings" prefHeight="28.0" prefWidth="186.0" text="Admin settings" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="SLIDERS" size="20" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Constantia Bold" size="18.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="secondary-btn" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="dashboardbtn" layoutX="51.0" layoutY="228.0" mnemonicParsing="false" onAction="#btnDashboard" prefHeight="28.0" prefWidth="186.0" text="Dashboard">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="DASHBOARD" size="20" styleClass="has-select" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="dashboard-btn" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="employeetablebtn" layoutX="53.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnEmployeetable" prefHeight="33.0" prefWidth="187.0" text="Edit employees">
+                                 <graphic>
+                                    <FontAwesomeIcon fx:id="employeeicon" fill="WHITE" glyphName="USERS" size="20" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="sidebarbtn" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                              <Button layoutX="54.0" layoutY="651.0" mnemonicParsing="false" onAction="#editProfile" prefHeight="28.0" prefWidth="186.0" text="Edit profile" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="EDIT" size="20" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Constantia Bold" size="18.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="secondary-btn" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnRefresh" layoutX="29.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshPage" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="REFRESH" size="15" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="btnAdd" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                              <Text fill="WHITE" layoutX="62.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="Refresh page">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="17.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <styleClass>
+                              <String fx:value="sidebar" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashboard_form" layoutX="191.0" layoutY="330.0" prefHeight="840.0" prefWidth="912.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="9.0" prefHeight="822.0" prefWidth="892.0" stylesheets="@../stylesheets/dashboardui.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutY="691.0" prefHeight="142.0" prefWidth="895.0">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="details" />
+                                       </styleClass>
+                                       <children>
+                                          <Line endX="792.0" layoutX="102.0" layoutY="35.0" startX="-100.0" />
+                                          <Text layoutX="36.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Details">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <FontAwesomeIcon glyphName="USER" layoutX="8.0" layoutY="23.0" size="25" />
+                                          <Text layoutX="6.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Line endX="787.0" layoutX="107.0" layoutY="72.0" startX="-107.0" />
+                                          <Text layoutX="6.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: ">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Line endX="787.0" layoutX="107.0" layoutY="106.0" startX="-107.0" />
+                                          <Text layoutX="8.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Line endX="787.0" layoutX="107.0" layoutY="142.0" startX="-107.0" />
+                                          <Text fx:id="detailsName" layoutX="72.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="819.0">
+                                             <font>
+                                                <Font name="Arial" size="17.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="detailsEmail" layoutX="72.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="819.0">
+                                             <font>
+                                                <Font name="Arial" size="17.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="detailsRole" layoutX="72.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="819.0">
+                                             <font>
+                                                <Font name="Arial" size="17.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutY="186.0" prefHeight="174.0" prefWidth="895.0" stylesheets="@../stylesheets/dashboardui.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AnchorPane layoutX="9.0" layoutY="7.0" prefHeight="159.0" prefWidth="877.0" stylesheets="@../stylesheets/dashboardui.css">
+                                             <styleClass>
+                                                <String fx:value="sidebar" />
+                                                <String fx:value="card" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                             <children>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="USER_SECRET" layoutX="108.0" layoutY="103.0" size="60" styleClass="shadow" />
+                                                <Text fill="WHITE" layoutX="304.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="TOTAL SUPER ADMINS">
+                                                   <font>
+                                                      <Font name="Berlin Sans FB" size="34.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="totalSuperAdmin" fill="WHITE" layoutX="445.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="Arial Black" size="40.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <TextField fx:id="dashboard_search" layoutX="4.0" layoutY="368.0" prefHeight="31.0" prefWidth="238.0" promptText=" Search employee" styleClass="search" />
+                                    <FontAwesomeIcon glyphName="SEARCH" layoutX="210.0" layoutY="390.0" size="20" styleClass="search-icon" />
+                                    <TableView fx:id="dashboard_table" layoutX="4.0" layoutY="409.0" onMouseClicked="#employeeSelect" prefHeight="279.0" prefWidth="887.0">
+                                       <columns>
+                                          <TableColumn fx:id="dashboard_employeeid" prefWidth="75.0" text="Employee ID" />
+                                          <TableColumn fx:id="dashboard_firstname" prefWidth="117.0" text="Firstname" />
+                                          <TableColumn fx:id="dashboard_lastname" prefWidth="117.0" text="Lastname" />
+                                          <TableColumn fx:id="dashboard_sex" prefWidth="54.0" text="Sex" />
+                                          <TableColumn fx:id="dashboard_email" prefWidth="178.0" text="Email" />
+                                          <TableColumn fx:id="dashboard_position" minWidth="0.0" prefWidth="158.0" text="Job position" />
+                                          <TableColumn fx:id="dashboard_date" prefWidth="190.0" text="Date member and updated" />
+                                       </columns>
+                                    </TableView>
+                                    <Text fill="#4a4a4a" layoutX="340.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMPLOYEE TABLE">
+                                       <font>
+                                          <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="9.0" layoutY="1.0" prefHeight="174.0" prefWidth="895.0" stylesheets="@../stylesheets/dashboardui.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="12.0" layoutY="7.0" prefHeight="159.0" prefWidth="277.0" stylesheets="@../stylesheets/dashboardui.css">
+                                       <styleClass>
+                                          <String fx:value="sidebar" />
+                                          <String fx:value="card" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" layoutX="20.0" layoutY="100.0" size="60" styleClass="shadow" />
+                                          <Text fill="WHITE" layoutX="73.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="TOTAL EMPLOYEES">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="totalEmployee" fill="WHITE" layoutX="91.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="0" textAlignment="CENTER" wrappingWidth="134.3427734375">
+                                             <font>
+                                                <Font name="Arial Black" size="29.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" layoutX="10.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="Male:">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="maleDisplay" fill="WHITE" layoutX="58.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="0" wrappingWidth="80.0048828125">
+                                             <font>
+                                                <Font name="Arial Black" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" layoutX="165.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="Female:">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="femaleDisplay" fill="WHITE" layoutX="235.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="0" wrappingWidth="38.0048828125">
+                                             <font>
+                                                <Font name="Arial Black" size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="308.0" layoutY="7.0" prefHeight="159.0" prefWidth="277.0" stylesheets="@../stylesheets/dashboardui.css">
+                                       <styleClass>
+                                          <String fx:value="sidebar" />
+                                          <String fx:value="card" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="20.0" layoutY="100.0" size="60" styleClass="shadow" />
+                                          <Text fill="WHITE" layoutX="99.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="TOTAL USERS">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="totalUser" fill="WHITE" layoutX="91.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="0" textAlignment="CENTER" wrappingWidth="134.3427734375">
+                                             <font>
+                                                <Font name="Arial Black" size="29.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="604.0" layoutY="7.0" prefHeight="159.0" prefWidth="277.0" stylesheets="@../stylesheets/dashboardui.css">
+                                       <styleClass>
+                                          <String fx:value="sidebar" />
+                                          <String fx:value="card" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="20.0" layoutY="100.0" size="60" styleClass="shadow" />
+                                          <Text fill="WHITE" layoutX="91.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="TOTAL ADMINS">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="totalAdmin" fill="WHITE" layoutX="91.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="0" textAlignment="CENTER" wrappingWidth="134.3427734375">
+                                             <font>
+                                                <Font name="Arial Black" size="29.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="employeetable_form" layoutX="153.0" layoutY="204.0" prefHeight="840.0" prefWidth="912.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="10.0" layoutY="9.0" prefHeight="822.0" prefWidth="892.0" stylesheets="@../stylesheets/dashboardui.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TextField fx:id="employeeidTextField" layoutX="105.0" layoutY="561.0" prefHeight="37.0" prefWidth="202.0" promptText="Employee ID" styleClass="textField" />
+                                    <Text layoutX="14.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID:">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="firstnameTextField" layoutX="105.0" layoutY="639.0" prefHeight="37.0" prefWidth="202.0" promptText="Firstname" styleClass="textField" />
+                                    <Text layoutX="14.0" layoutY="662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Firstname:">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="lastnameTextField" layoutX="105.0" layoutY="719.0" prefHeight="37.0" prefWidth="202.0" promptText="Lastname" styleClass="textField" />
+                                    <Text layoutX="14.0" layoutY="742.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lastname:">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="323.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex:">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <ComboBox fx:id="chooseSex" layoutX="386.0" layoutY="561.0" prefHeight="37.0" prefWidth="203.0" promptText="Choose" styleClass="textField" />
+                                    <TextField fx:id="emailTextField" layoutX="386.0" layoutY="639.0" prefHeight="37.0" prefWidth="202.0" promptText="Email" styleClass="textField" />
+                                    <Text layoutX="323.0" layoutY="662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="323.0" layoutY="742.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position:">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <ComboBox fx:id="choosePosition" layoutX="386.0" layoutY="719.0" prefHeight="37.0" prefWidth="203.0" promptText="Choose" styleClass="textField" />
+                                    <Button layoutX="641.0" layoutY="563.0" mnemonicParsing="false" onAction="#clearEmployee" prefHeight="34.0" prefWidth="93.0" text="Clear" textFill="WHITE">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="19.0" />
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="btnClear" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button layoutX="641.0" layoutY="641.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="34.0" prefWidth="93.0" text="Add" textFill="WHITE">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="19.0" />
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="btnAdd" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button layoutX="641.0" layoutY="721.0" mnemonicParsing="false" onAction="#updateEmployee" prefHeight="34.0" prefWidth="93.0" text="Update" textFill="WHITE">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="19.0" />
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="btnUpdate" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button layoutX="746.0" layoutY="641.0" mnemonicParsing="false" onAction="#deleteEmployee" prefHeight="34.0" prefWidth="116.0" text="Delete" textFill="#fffefe">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="19.0" />
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="btnDelete" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="11.0" layoutY="10.0" prefHeight="507.0" prefWidth="892.0" stylesheets="@../stylesheets/dashboardui.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="employeeTable" layoutX="5.0" layoutY="68.0" onMouseClicked="#employeeSelect" prefHeight="435.0" prefWidth="882.0">
+                                      <columns>
+                                        <TableColumn fx:id="employeeid_column" prefWidth="75.0" text="Employee ID" />
+                                        <TableColumn fx:id="firstname_column" prefWidth="117.0" text="Firstname" />
+                                          <TableColumn fx:id="lastname_column" prefWidth="117.0" text="Lastname" />
+                                          <TableColumn fx:id="sex_column" prefWidth="54.0" text="Sex" />
+                                          <TableColumn fx:id="email_column" prefWidth="178.0" text="Email" />
+                                          <TableColumn fx:id="position_column" minWidth="0.0" prefWidth="158.0" text="Job position" />
+                                          <TableColumn fx:id="date_column" prefWidth="190.0" text="Date member and updated" />
+                                      </columns>
+                                    </TableView>
+                                    <TextField fx:id="searchTextField" layoutX="5.0" layoutY="20.0" prefHeight="35.0" prefWidth="251.0" promptText="Search">
+                                       <styleClass>
+                                          <String fx:value="search" />
+                                          <String fx:value="shadow" />
+                                       </styleClass></TextField>
+                                    <FontAwesomeIcon glyphName="SEARCH" layoutX="231.0" layoutY="45.0" size="20" styleClass="search-icon" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="edit_form" layoutX="9.0" layoutY="6.0" prefHeight="829.0" prefWidth="894.0" stylesheets="@../stylesheets/dashboardui.css" visible="false">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <AnchorPane layoutX="146.0" layoutY="108.0" prefHeight="614.0" prefWidth="602.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Button layoutX="212.0" layoutY="495.0" mnemonicParsing="false" onAction="#btnUpdateProfile" prefHeight="36.0" prefWidth="235.0" text="Update profile" textFill="WHITE">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="20.0" />
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="btnAdd" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                    <PasswordField fx:id="edit_retype_password" layoutX="179.0" layoutY="439.0" prefHeight="36.0" prefWidth="312.0" promptText="Re-type password" styleClass="textField" />
+                                    <PasswordField fx:id="edit_password" layoutX="178.0" layoutY="381.0" prefHeight="36.0" prefWidth="312.0" promptText="New password" styleClass="textField" />
+                                    <TextField fx:id="edit_email" editable="false" layoutX="179.0" layoutY="323.0" prefHeight="36.0" prefWidth="312.0" promptText="Email" styleClass="textField" />
+                                    <TextField fx:id="edit_username" layoutX="179.0" layoutY="267.0" prefHeight="36.0" prefWidth="312.0" promptText="Username" styleClass="textField" />
+                                    <TextField fx:id="edit_name" layoutX="179.0" layoutY="211.0" prefHeight="36.0" prefWidth="312.0" promptText="Fullname" styleClass="textField" />
+                                    <Text layoutX="85.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fullname:">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="81.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="114.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="48.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New password:">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="24.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Re-type password:">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="display_edit_email" fill="#003a61" layoutX="190.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="280.0">
+                                       <font>
+                                          <Font name="SansSerif Italic" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="display_edit_name" fill="#003a61" layoutX="184.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="293.0">
+                                       <font>
+                                          <Font name="Arial Black" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <FontAwesomeIcon fill="#009bff" glyphName="USER" layoutX="306.0" layoutY="102.0" size="60" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
